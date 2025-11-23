@@ -68,7 +68,8 @@ def delete_item():
     
     if name in INVENTORY:
         del INVENTORY[name]
-        print(f"\n🗑️ {name.capitalize()} deleted successfully.")
+        print(f"\n {name.capitalize()} deleted successfully.")
     else:
 
         print(f"Error: {name.capitalize()} not found in inventory.")
+
