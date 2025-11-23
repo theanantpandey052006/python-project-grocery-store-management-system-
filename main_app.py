@@ -1,10 +1,7 @@
-# main_app.py
-import sys
-# Import all required functions from the inventory manager
+import sys # Import all required functions
 from inventory_manager import view_inventory, add_item, update_item, delete_item
 
 def display_menu():
-    """Displays the main menu options."""
     print("\n--- Grocery Store Management System ---")
     print("1. View Inventory")
     print("2. Add New Item")
@@ -14,7 +11,6 @@ def display_menu():
     print("---------------------------------------")
 
 def run_system():
-    """Main application loop."""
     while True:
         display_menu()
         choice = input("Enter your choice (1-5): ")
@@ -31,7 +27,8 @@ def run_system():
             print("\nExiting system. Goodbye! 👋")
             sys.exit()
         else:
-            print("\n⚠️ Invalid choice. Please enter a number between 1 and 5.")
+            print("\n Invalid choice. Please enter a number between 1 and 5.")
 
 if __name__ == "__main__":
-    run_system()
+
+    run_system()# calling the function
