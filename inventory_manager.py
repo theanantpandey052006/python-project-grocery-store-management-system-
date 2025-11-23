@@ -2,7 +2,6 @@
 from inventory_data import INVENTORY
 
 def view_inventory():
-    """Prints the current inventory."""
     if not INVENTORY:
         print("\nThe inventory is empty.")
         return
@@ -15,8 +14,7 @@ def view_inventory():
         quantity, price = details
         print(f"{item.capitalize():<15} {quantity:<10} {price:<10.2f}")
 
-def add_item():
-    """Adds a new item to the inventory."""
+def add_item():# adding the item 
     name = input("Enter item name to add: ").lower()
     if name in INVENTORY:
         print(f"Error: {name.capitalize()} already exists. Use 'Update' to modify.")
@@ -34,7 +32,6 @@ def add_item():
         print("\n Invalid input. Quantity must be a whole number, and price must be a positive number.")
 
 def update_item():
-    """Updates the stock or price of an existing item."""
     name = input("Enter item name to update: ").lower()
     
     if name not in INVENTORY:
@@ -62,8 +59,7 @@ def update_item():
     except ValueError:
         print("\n Invalid input. Check if quantity is a whole number and price is a positive number.")
 
-def delete_item():
-    """Deletes an item from the inventory."""
+def delete_item():# deleting the item
     name = input("Enter item name to delete: ").lower()
     
     if name in INVENTORY:
@@ -72,4 +68,5 @@ def delete_item():
     else:
 
         print(f"Error: {name.capitalize()} not found in inventory.")
+
 
