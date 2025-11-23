@@ -29,9 +29,9 @@ def add_item():
             raise ValueError
         
         INVENTORY[name] = [quantity, price]
-        print(f"\n✅ {name.capitalize()} added successfully.")
+        print(f"\n {name.capitalize()} added successfully.")
     except ValueError:
-        print("\n❌ Invalid input. Quantity must be a whole number, and price must be a positive number.")
+        print("\n Invalid input. Quantity must be a whole number, and price must be a positive number.")
 
 def update_item():
     """Updates the stock or price of an existing item."""
@@ -57,10 +57,10 @@ def update_item():
             if new_price < 0: raise ValueError
             INVENTORY[name][1] = new_price
             
-        print(f"\n✅ {name.capitalize()} updated successfully.")
+        print(f"\n {name.capitalize()} updated successfully.")
         
     except ValueError:
-        print("\n❌ Invalid input. Check if quantity is a whole number and price is a positive number.")
+        print("\n Invalid input. Check if quantity is a whole number and price is a positive number.")
 
 def delete_item():
     """Deletes an item from the inventory."""
@@ -70,4 +70,5 @@ def delete_item():
         del INVENTORY[name]
         print(f"\n🗑️ {name.capitalize()} deleted successfully.")
     else:
+
         print(f"Error: {name.capitalize()} not found in inventory.")
